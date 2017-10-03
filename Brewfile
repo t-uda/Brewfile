@@ -1,114 +1,178 @@
+#!/usr/bin/env bash
+
+#BREWFILE_IGNORE
+if ! which brew >& /dev/null;then
+  brew_installed=0
+  echo Homebrew is not installed!
+  echo Install now...
+  echo ruby -e \"\$\(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install\)\"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo
+fi
+#BREWFILE_ENDIGNORE
 
 # tap repositories and their packages
 
-## caskroom/cask
-tap caskroom/cask
-install brew-cask
-cask install aquaterm
-cask install gimp
-cask install skim
+brew tap caskroom/cask
+brew cask install aquaterm
+brew cask install filezilla
+brew cask install gimp
+brew cask install haskell-platform
+brew cask install hyperswitch
+brew cask install iterm2
+brew cask install java
+brew cask install launchy
+brew cask install osxfuse
+brew cask install paraview
+brew cask install skim
+brew cask install vagrant
+brew cask install xquartz
 
-## homebrew/dupes
-tap homebrew/dupes
-install grep
-install lapack
+brew tap homebrew/boneyard
 
-## homebrew/science
-tap homebrew/science
-install openblas
+brew tap homebrew/core
+brew install jpeg
+brew install gd
+brew install gcc@4.9 --with-fortran
+brew install macvim
+brew install x264
+brew install gdbm
+brew install gobject-introspection
+brew install cln
+brew install ocaml
+brew install lapack
+brew install fontconfig
+brew install lv
+brew install gdk-pixbuf
+brew install htop-osx
+brew install pyqt
+brew install gmp
+brew install yuicompressor
+brew install pixman
+brew install freetype
+brew install python
+brew install gtk+
+brew install gnutls
+brew install pango
+brew install isl@0.11
+brew install python3
+brew install isl@0.12
+brew install npth
+brew install p11-kit
+brew install makedepend
+brew install yasm
+brew install gnu-tar
+brew install cscope
+brew install findutils
+brew install shared-mime-info
+brew install cairo
+brew install webp
+brew install texi2html
+brew install intltool
+brew install emscripten
+brew install libunistring
+brew install geos
+brew install libgpg-error
+brew install automake
+brew install lua
+brew install proj
+brew install libpng
+brew install xvid
+brew install boost
+brew install gnu-time
+brew install camlp5
+brew install tree
+brew install screen
+brew install ginac
+brew install wget
+brew install libgcrypt
+brew install openssl
+brew install pandoc
+brew install atk
+brew install icu4c
+brew install isl
+brew install pkg-config
+brew install open-mpi
+brew install adns
+brew install libtiff
+brew install sqlite
+brew install harfbuzz
+brew install xz
+brew install sshfs
+brew install pcre
+brew install mpfr@2
+brew install gmp@4
+brew install libmpc@0.8
+brew install cabal-install
+brew install libgeotiff
+brew install glib
+brew install nkf
+brew install libmpc
+brew install cgal
+brew install graphite2
+brew install libusb
+brew install libevent
+brew install peco
+brew install grep
+brew install ffmpeg
+brew install mtr
+brew install libtasn1
+brew install gnupg
+brew install autoconf
+brew install gnu-sed
+brew install hicolor-icon-theme
+brew install libassuan
+brew install sphinx-doc
+brew install libcroco
+brew install cloog
+brew install gcc
+brew install sip
+brew install cmake
+brew install gnuplot --with-cairo --with-aquaterm --with-x11
+brew install lame
+brew install librsvg
+brew install coreutils
+brew install tig
+brew install openblas
+brew install qt
+brew install node
+brew install llvm
+brew install giflib
+brew install pinentry
+brew install libtool
+brew install openssl@1.1
+brew install libffi
+brew install netcat
+brew install readline
+brew install lzlib
+brew install gettext
+brew install nettle
+brew install mozilla-addon-sdk
+brew install ghc
+brew install libksba
+brew install mpfr
 
-## homebrew/versions
-tap homebrew/versions
-install cloog018
-install gcc49 --enable-fortran
-install gmp4
-install isl011
-install libmpc08
-install llvm34 --disable-shared --without-libffi
-install mpfr2
+brew tap homebrew/dupes
 
-## rcmdnk/file
-tap rcmdnk/file
-install brew-file
+brew tap homebrew/fuse
 
-# Other Homebrew packages
-install boost
-install cairo
-install cgal
-install cloog
-install cmake
-install coreutils
-install cscope
-install findutils
-install fontconfig
-install freetype
-install gcc
-install gd
-install gdbm
-install geos
-install gettext
-install giflib
-install glib
-install gmp
-install gnu-sed
-install gnu-tar
-install gnu-time
-install gnuplot --with-aquaterm --with-cairo --with-latex --with-qt --with-x11 --without-emacs
-install gnutls
-install gobject-introspection
-install harfbuzz
-install htop-osx
-install icu4c
-install isl
-install jpeg
-install libevent --universal
-install libffi
-install libgcrypt
-install libgeotiff
-install libgpg-error
-install libmpc
-install libpng
-install libtasn1
-install libtiff
-install libtool
-install llvm
-install lua
-install lv
-install lzlib
-install macvim
-install makedepend
-install mozilla-addon-sdk
-install mpfr
-install netcat
-install nettle
-install nkf
-install node
-install open-mpi --c++11
-install openssl --universal --universal
-install pandoc
-install pango
-install pcre
-install pixman
-install pkg-config
-install proj
-install python
-install qt
-install readline
-install sqlite
-install tig
-install tree
-install weechat
-install wget
-install xz
+brew tap homebrew/science
+
+brew tap homebrew/versions
+
+brew tap rcmdnk/file
+brew install brew-file
+
+# Cask applications
+brew cask install sshfs
 
 # App Store applications
-appstore GarageBand
-appstore iMovie
-appstore iPhoto
-appstore Keynote
-appstore LimeChat
-appstore Numbers
-appstore Pages
-appstore Slack
-appstore Xcode
-appstore YoruFukurou
+#appstore 682658836 GarageBand
+#appstore 408981434 iMovie
+#appstore 409183694 Keynote
+#appstore 414030210 LimeChat
+#appstore 409203825 Numbers
+#appstore 409201541 Pages
+#appstore 803453959 Slack
+#appstore 497799835 Xcode
+#appstore 428834068 Yorufukurou
